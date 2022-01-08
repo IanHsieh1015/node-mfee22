@@ -53,3 +53,4 @@ doWork("刷牙", 2000)
         // 處理錯誤
         console.error(err);
     });
+    
