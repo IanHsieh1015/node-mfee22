@@ -7,6 +7,7 @@ let doWork = function (job, timer, callback) {
     }, timer);
 };
 
+// 正確寫法，三件事接著做
 // 刷牙 --> 吃早餐 --> 寫功課
 let dt = new Date();
 console.log(`Start ${dt.toISOString()}`);
@@ -23,3 +24,20 @@ doWork("刷牙", 2000, (err, result) => {
     });
 });
 
+// 錯誤寫法，三件事同時做
+// let dt = new Date();
+// console.log(`Start ${dt.toISOString()}`);
+// doWork("刷牙", 2000, (err, result) => {
+//     let dt = new Date();
+//     console.log(`${result} at ${dt.toISOString()}`);
+// });
+
+// doWork("吃早餐", 5000, (err, result) => {
+//     let dt = new Date();
+//     console.log(`${result} at ${dt.toISOString()}`);
+// });
+
+// doWork("寫功課", 7000, (err, result) => {
+//     let dt = new Date();
+//     console.log(`${result} at ${dt.toISOString()}`);
+// });
