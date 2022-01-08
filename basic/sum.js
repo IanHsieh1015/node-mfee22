@@ -58,7 +58,7 @@ console.log(sum_reducer(15));
 
 
 
-// 壓力測試
+// 效能測試
 console.time('for')
 for (let i = 0; i < 10000; i++)
     sum_for(100000); //  秒
