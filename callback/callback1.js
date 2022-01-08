@@ -11,7 +11,6 @@ let doWork = function (job, timer, callback) {
 let dt = new Date();
 console.log(`Start ${dt.toISOString()}`);
 doWork("刷牙", 2000, (err, result) => {
-    // 刷牙 --> 吃早餐 --> 寫功課
     let dt = new Date();
     console.log(`${result} at ${dt.toISOString()}`);
 });
