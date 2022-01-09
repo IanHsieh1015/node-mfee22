@@ -21,13 +21,33 @@ let readfilePromise = new Promise((resolve, reject) => {
 //     console.log(`這是 Promise 的 err: ${err}`)
 // })
 
-async function main() {
-    let result = await readfilePromise;
-    console.log(`這是 Promise 的 result: ${result}`);
+// 原先未加 try catch 版本
+// async function main() {
+//     let result = await readfilePromise;
+//     console.log(`這是 Promise 的 result: ${result}`);
 
-    let err = await readfilePromise;
-    console.log(`這是 Promise 的 err: ${err}`);
+//     let err = await readfilePromise;
+//     console.log(`這是 Promise 的 err: ${err}`);
+// }
+
+// main();
+
+
+// 加 try catch 版本
+async function main() {
+    try {
+        let result = await readfilePromise;
+        console.log(`這是 Promise 的 result: ${result}`);
+    } catch(err) {
+        err = await readfilePromise;
+        console.log(`這是 Promise 的 err: ${err}`);
+    }
 }
 
 main();
 
+// 箭頭函示
+(async () => {
+    let result = await readfilePromise;
+    console.log(`這是 Promise 的 result: ${result}`);
+})();
