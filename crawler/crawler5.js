@@ -43,7 +43,7 @@ require("dotenv").config();
         stockNo,
       },
     })
-    //console.log(response.data);
+    console.log(response.data);
   } catch {
     console.log(err);
   }
