@@ -5,11 +5,7 @@ require("dotenv").config();
 const path = require("path");
 const connection = require("./utils/db");
 
-<<<<<<< HEAD
 // 利用 express 這個 library 來建立一個 web app (express instance)
-=======
-// 利用 express 這個 library 來建立一個web app (express instance)
->>>>>>> 1599f2188bb55f0632342bd8bc93c8ac572c8273
 let app = express();
 
 // express 是由 middleware 組成的
@@ -110,8 +106,4 @@ app.use((err, req, res, next) => {
 const port = process.env.SERVER_PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 1599f2188bb55f0632342bd8bc93c8ac572c8273
