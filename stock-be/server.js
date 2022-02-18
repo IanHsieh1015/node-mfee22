@@ -103,7 +103,7 @@ app.use((err, req, res, next) => {
   res.status(500).send("Server 錯誤: 請洽系統管理員");
 });
 
-const port = process.env.SERVER_PORT || 3000;
+const port = process.env.SERVER_PORT || 3001;
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
 });
